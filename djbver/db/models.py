@@ -7,7 +7,7 @@ __all__ = [
 ]
 
 
-class GenericModel(models):
+class GenericModel(models.Model):
     created = models.DateTimeField('생성일', auto_now_add=True)
     updated = models.DateTimeField('수정일', auto_now=True)
 
@@ -15,7 +15,7 @@ class GenericModel(models):
         abstract = True
 
 
-class GenericActiveModel(models):
+class GenericActiveModel(models.Model):
     is_active = models.BooleanField('활성화 여부', default=True)
     
     created = models.DateTimeField('생성일', auto_now_add=True)
